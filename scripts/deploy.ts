@@ -4,8 +4,6 @@ async function main() {
   const Secreter = await ethers.getContractFactory("Secret");
   const secreter = await Secreter.deploy("Hello, Hardhat!");
 
-  await secreter.deployed();
-
   console.log("Secreter deployed to:", secreter.address);
 }
 
