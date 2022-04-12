@@ -12,7 +12,11 @@ contract Secret {
         secret = message;
     }
 
-    function setGreeting(string memory message) public {
+    function getSecret() public view returns (string memory) {
+        return secret;
+    }
+
+    function setSecret(string memory message) public {
         string memory changedSecret = secret;
         secret = message;
         emit UpdateSecret(secret, changedSecret);
