@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "hardhat run scripts/deploy.ts --network ropsten",
+    "interact": "hardhat run scripts/interact.ts",
     "compile": "hardhat compile",
     "test": "ts-mocha -p tsconfig.json test/*.spec.ts"
   },

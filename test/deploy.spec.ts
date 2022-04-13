@@ -1,11 +1,11 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
 
-describe("Secreter", () => {
-  it("Should return the new secret once it's changed", async function () {
-    const Secreter = await ethers.getContractFactory("Secret");
-    const secreter = await Secreter.deploy("Chshshshsh...");
+describe("HelloWorld", () => {
+  it("Should return the new message once it's changed", async function () {
+    const Messager = await ethers.getContractFactory("HelloWorld");
+    const messager = await Messager.deploy("Chshshshsh...");
 
-    expect(await secreter.getSecret()).to.equal("Chshshshsh...");
+    expect(await messager.getMessage()).to.equal("Chshshshsh...");
   });
 });
