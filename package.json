@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "hardhat run scripts/deploy.ts --network ropsten",
-    "interact": "hardhat run scripts/interact.ts",
     "compile": "hardhat compile",
-    "test": "ts-mocha -p tsconfig.json test/*.spec.ts"
+    "deploy": "hardhat run scripts/deploy.ts --network ropsten",
+    "interact": "hardhat run scripts/interact.ts",
+    "test": "ts-mocha -p tsconfig.json test/*.spec.ts",
+    "verify": "eval $(grep 'DEPLOYED_CONTRACT_ADDRESS' .env) && hardhat verify --network ropsten $DEPLOYED_CONTRACT_ADDRESS \"Hello World\""
   },
   "keywords": [],
   "author": "",
